@@ -49,6 +49,7 @@ docker compose up --build
 - Frontend: http://localhost:3000
 - Backend API: http://localhost:5000
 - MongoDB: mongodb://localhost:27017
+![Screenshot 2025-06-17 190851](https://github.com/user-attachments/assets/5626676b-460f-4434-9983-791ef9981c7f)
 
 ## 💻 Local Development Setup
 
@@ -113,6 +114,10 @@ CMD ["npm", "start"]
 - **MongoDB**: Database service with persistent volume
 - **Server**: Node.js backend API
 - **Client**: React frontend application
+![Screenshot 2025-06-17 191038](https://github.com/user-attachments/assets/e005c906-1399-4f2f-8eb1-461d10e60cbd)
+![Screenshot 2025-06-17 190916](https://github.com/user-attachments/assets/3c26d20e-5fc1-4744-b960-f28c348c3a1d)
+![Screenshot 2025-06-17 190945](https://github.com/user-attachments/assets/6ae2ce5b-0a1f-499d-9de7-172ea420a8c5)
+![Screenshot 2025-06-17 191156](https://github.com/user-attachments/assets/2bcc8a6d-a0f8-465a-aed5-096fddcadcac)
 
 ## 🔐 Environment Variables
 The following environment variables are configured in docker-compose.yml:
