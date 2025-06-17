@@ -35,39 +35,51 @@ Deploy a full-stack web application to AWS EC2, configure NGINX as a reverse pro
 
 ---
 
-## Local Development Setup
+## 🚀 Local Development Setup
 
-1. Launch EC2 Instance
-Use Ubuntu 22.04.
-In the security group, allow:
-Port 22 (SSH)
-Port 80 (HTTP)
+### 1. Launch EC2 Instance
+- Use Ubuntu 22.04
+- Configure Security Group:
+  - Allow Port 22 (SSH)
+  - Allow Port 80 (HTTP)
 
-2. SSH into Your EC2 Instance
-
+### 2. Connect to EC2 Instance
+```bash
 ssh -i "your-key.pem" ubuntu@<your-ec2-public-ip>
+```
 
-3. Install Dependencies
-4. 
+### 3. Install Required Dependencies
+```bash
 sudo apt update
 sudo apt install nodejs npm nginx
+```
 
-5. Upload Code to EC2
-clone with Git and Go to Assignment 2:
+### 4. Clone and Setup Project
+```bash
+# Clone the repository
+git clone https://github.com/Darshan2605/OneVarsity-DevOps-Assignments.git
 
-# Using Git (on EC2)
-git clone [https://github.com/your-username/aws-deployment-project.git](https://github.com/Darshan2605/OneVarsity-DevOps-Assignments.git)
+# Navigate to project directory
+cd OneVarsity-DevOps-Assignments/Assignment-2
+```
 
-5. Run Backend App
-
+### 5. Run Backend Application
+```bash
+# Install dependencies
 npm install
-node app.js   
 
-6. Configure NGINX as a Reverse Proxy
-Edit the file /etc/nginx/sites-available/default:
+# Start the application
+node app.js
+```
 
-Nginx-
+### 6. Configure NGINX as Reverse Proxy
+1. Edit NGINX configuration:
+```bash
+sudo nano /etc/nginx/sites-available/default
+```
 
+2. Add the following configuration:
+```nginx
 server {
     listen 80;
     server_name <your-ec2-ip> or yourdomain.com;
@@ -81,12 +93,21 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 }
+```
 
-Restart NGINX:
-
+3. Test and restart NGINX:
+```bash
+# Test configuration
 sudo nginx -t
-sudo systemctl restart nginx
 
-✅ Your app should now be accessible at:
-http://<your-ec2-ip> (proxied to your Node.js app on port 3000)
+# Restart NGINX
+sudo systemctl restart nginx
+```
+
+### 7. Access Your Application
+Your application should now be accessible at:
+```
+http://<your-ec2-ip>
+```
+(Proxied to your Node.js app running on port 3000)
 
