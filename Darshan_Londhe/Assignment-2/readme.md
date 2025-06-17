@@ -14,11 +14,9 @@ Deploy a full-stack web application to AWS EC2, configure NGINX as a reverse pro
 
 ## 📷 Screenshots
 
-| App Running on EC2 | NGINX Reverse Proxy Setup |
-|--------------------|---------------------------|
-| (![Screenshot 2025-06-16 232053](https://github.com/user-attachments/assets/e1072e4a-5f7d-487a-9a54-3c3feca083a1)
-) | (![Screenshot 2025-06-16 231536](https://github.com/user-attachments/assets/25dfd929-331c-4385-aced-4de54032e160)
-) |
+| App Running on EC2                                                                                     | NGINX Reverse Proxy Setup                                                                             |
+|-------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| ![Screenshot 2025-06-16 232053](https://github.com/user-attachments/assets/e1072e4a-5f7d-487a-9a54-3c3feca083a1) | ![Screenshot 2025-06-16 231536](https://github.com/user-attachments/assets/25dfd929-331c-4385-aced-4de54032e160) |
 
 ---
 
