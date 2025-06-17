@@ -42,11 +42,19 @@ Deploy a full-stack web application to AWS EC2, configure NGINX as a reverse pro
 - Configure Security Group:
   - Allow Port 22 (SSH)
   - Allow Port 80 (HTTP)
+![Screenshot 2025-06-16 225243](https://github.com/user-attachments/assets/5c4159a4-7086-45c7-99fc-83a79006d029)
+![Screenshot 2025-06-16 225258](https://github.com/user-attachments/assets/7c7da506-c286-43fc-b6ce-ba14e64c5267)
+![Screenshot 2025-06-16 225308](https://github.com/user-attachments/assets/a4658795-7b5f-4d98-adeb-2334e8dc69f8)
+![Screenshot 2025-06-16 225344](https://github.com/user-attachments/assets/0d4dbc1d-542c-435a-a66c-64b7b11d9294)
+![Screenshot 2025-06-16 225428](https://github.com/user-attachments/assets/39152ea0-89f7-4143-ae7b-3b173fbec276)
+
 
 ### 2. Connect to EC2 Instance
 ```bash
 ssh -i "your-key.pem" ubuntu@<your-ec2-public-ip>
 ```
+![Screenshot 2025-06-16 225709](https://github.com/user-attachments/assets/420e21b1-4497-42b4-9b76-35af9567d08d)
+
 
 ### 3. Install Required Dependencies
 ```bash
@@ -94,6 +102,8 @@ server {
     }
 }
 ```
+![Screenshot 2025-06-16 231536](https://github.com/user-attachments/assets/ad4b74c3-0b3f-4704-bf2d-0846bde1a123)
+
 
 3. Test and restart NGINX:
 ```bash
@@ -110,4 +120,6 @@ Your application should now be accessible at:
 http://<your-ec2-ip>
 ```
 (Proxied to your Node.js app running on port 3000)
+![Screenshot 2025-06-16 232053](https://github.com/user-attachments/assets/a440d829-6309-4464-930c-2b4326bc7484)
+
 
